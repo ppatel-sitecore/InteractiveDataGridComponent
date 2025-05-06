@@ -1,4 +1,84 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+/* 🔹 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🔹 Container Wrapper */
+.data-grid-container {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+/* 🔹 Data Grid Table */
+.data-grid {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+/* 🔹 Header Styles */
+.data-grid thead {
+  background: #007bff;
+  color: white;
+}
+
+.data-grid th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.data-grid th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.data-grid th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* 🔹 Row & Cell Styles */
+.data-grid tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.data-grid td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* 🔹 Alternate Row Coloring */
+.data-grid tbody tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+/* 🔹 Hover Effect */
+.data-grid tbody tr:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .data-grid th,
+  .data-grid td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-grid-container {
+    padding: 10px;
+  }
+  .data-grid th,
+  .data-grid td {
+    padding: 6px;
+    font-size: 12px;
+  }
 }
